@@ -1,0 +1,13 @@
+services:
+  lensajar-core:
+    build: .
+    image: lensajar-core:latest
+    container_name: lensajar-core
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    environment:
+      - PORT=80
+      - API_KEY=lensajar-demo-key
+    mem_limit: 256m
+    cpus: 0.5
